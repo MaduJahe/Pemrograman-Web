@@ -15,7 +15,7 @@ if (isset($_POST['submit'])) {
 
         $_SESSION['username'] = $username;
 
-        header('Location:admin.php');
+        header('Location:admin.html');
     } else {
         echo '<script> alert("Username atau password salah!");
         window.location="login-page.php"; </script>';
