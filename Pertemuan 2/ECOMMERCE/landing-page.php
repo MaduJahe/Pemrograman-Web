@@ -1,0 +1,185 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['username'])) {
+    header('Location:login-page.php');
+} ?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
+    <style>
+    #boxShadow {
+        border: 1px solid;
+
+        box-shadow: 5px 5px 5px 5px #00000054;
+    }
+    </style>
+</head>
+
+<body>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand col-md-2" href="#">BePhone</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <form class="d-flex ms-auto col-12 mt-3 col-md-6" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+            <div class="collapse navbar-collapse col-md-6" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Dropdown </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider" />
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="logout.php" class="nav-link">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--Akhir Navbar-->
+
+    <div class="m-4 p-0">
+        <div class="row border border-dark" id="boxShadow">
+            <div class="col-12 col-md-3">
+                <h4>My Market</h4>
+                <br />
+                Iphone 7
+                <hr />
+                Iphone 8
+                <hr />
+                Iphone 9
+                <hr />
+                Iphone 10
+                <hr />
+                Iphone 11
+                <hr />
+                Iphone 12
+                <hr />
+                Iphone 13
+                <hr />
+                Iphone 14
+                <hr />
+            </div>
+            <div class="col-12 col-md-6">
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="Img/CarouselItem1.jpg" class="d-block w-100" alt="..." />
+                        </div>
+                        <div class="carousel-item">
+                            <img src="Img/CarouselItem2.jpg" class="d-block w-100" alt="..." />
+                        </div>
+                        <div class="carousel-item">
+                            <img src="Img/CarouselItem3.jpg" class="d-block w-100" alt="..." />
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <div class="col-12 col-md-3 text-center">
+                <div style="background-color: rgba(94, 84, 84, 0.067)">
+                    <h4>Populer-Item</h4>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <p>IPhone 14</p>
+                    </div>
+                    <div class="col-6"><img src="Img/Populer-Item.jpeg" width="100px" /></div>
+                    <hr />
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5 border border-dark ">
+            <div class="col-12 col-md-3">
+                <script src="https://cdn.logwork.com/widget/countdown.js"></script>
+
+                <a href="https://logwork.com/countdown-wezh" class="countdown-timer" data-timezone="Asia/Jakarta"
+                    data-textcolor="#ff0000" data-date="2023-01-01 00:00" data-background="#000000"
+                    data-digitscolor="#a1a1a1" data-unitscolosr="#856c6c">SPECIAL PROMO</a>
+            </div>
+            <div class="col-sm-12 col-md-2 offset-md-2 p-3" style="float:none;margin:auto;">
+                <div class="card" style="width: 18rem">
+                    <img src="Img/Diskon.jpg" class="card-img-top" alt="..." />
+                    <div class="card-body">
+                        <p class="card-text">
+                        <h5><b>Iphone 10 </b></h5><br />
+                        Diskon 10%
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm  col-md-2 p-3">
+                <div class="card" style="width: 18rem">
+                    <img src="..." class="card-img-top" alt="..." />
+                    <div class="card-body">
+                        <p class="card-text">
+                        <h5><b>Iphone 11 </b></h5><br />
+                        Diskon 10%</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm  col-md-2 p-3">
+                <div class="card" style="width: 18rem">
+                    <img src="..." class="card-img-top" alt="..." />
+                    <div class="card-body">
+                        <p class="card-text">
+                        <h5><b>Iphone 12 </b></h5><br />
+                        Diskon 10%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
